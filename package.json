@@ -1,0 +1,32 @@
+{
+  "name": "letsgo-tracker",
+  "version": "1.0.0",
+  "description": "Pokemon Let's Go Pokedex Tracker",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "mkdist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "slab",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "@electron/remote": "^1.0.2"
+  },
+  "build": {
+    "appId": "com.electron.letsgotracker",
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.png",
+      "signAndEditExecutable": false
+    },
+    "extraFiles": [
+      "**/pokemon.json"
+    ]
+  }
+}
